@@ -1,6 +1,3 @@
-@charset "UTF-8";
-/* CSS Document */
-
 *,
 *::before,
 *::after {
@@ -21,9 +18,7 @@ body {
     margin: 0;
 }
 
-.max-width-wrapper {
-    /* Overflow: hidden hides the excess portions of the decorative elements so there isn't a 
-  horizontal scrollbar, plus make sure margin is 0 so displays to the edge */
+.contenedor {
     overflow: hidden;
     min-height: 100%;
     max-width: 1500px;
@@ -36,9 +31,7 @@ figure {
     margin: 0;
 }
 
-/**************************************************/
-/* Nav Section - Mobile First */
-/**************************************************/
+
 header {
     display: flex;
     align-items: center;
@@ -80,14 +73,7 @@ header {
     height: 19.2px;
 }
 
-.nav-links-container li a:hover svg {
-    fill: #4EE1A0;
-}
 
-/**************************************************/
-/* Selfie, Oval, and circle decoration */
-/**************************************************/
-/* Primary image */
 .image-selfie {
     position: absolute;
     width: 174px;
@@ -100,8 +86,8 @@ header {
     background: linear-gradient(rgba(36, 36, 36, 0.0001) 100%, #242424 100%);
 }
 
-/* Image to show behind primary image */
-.header-oval {
+
+.header_ovalo {
     position: absolute;
     width: 530px;
     height: 129px;
@@ -109,7 +95,7 @@ header {
     right: 187px;
 }
 
-.header-circle {
+.header_circulo {
     position: absolute;
     height: 129px;
     width: 129px;
@@ -117,9 +103,7 @@ header {
     right: -65px;
 }
 
-/**************************************************/
-/* Header message - Mobile */
-/**************************************************/
+
 .header-message-container {
     display: flex;
     align-items: center;
@@ -164,14 +148,10 @@ h1 {
     padding-bottom: 10px;
 }
 
-.contact-me-link:hover {
-    color: #4EE1A0;
-}
 
-/**************************************************/
-/* Skills Section - Mobile */
-/**************************************************/
-.skills-wrapper {
+
+
+.skills_contenedor {
     position: relative;
     border-top: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
@@ -180,7 +160,7 @@ h1 {
     margin-right: 16px;
 }
 
-.skills-wrapper h2 {
+.skills_contenedor h2 {
     color: #ffffff;
     font-size: 32px;
     font-weight: 700;
@@ -191,7 +171,7 @@ h1 {
     margin-bottom: 1px;
 }
 
-.skills-wrapper p {
+.skills_contenedor p {
     color: rgba(217, 217, 217, 1);
     font-size: 16px;
     font-weight: 500;
@@ -200,11 +180,9 @@ h1 {
     margin-top: 0;
 }
 
-.skills-wrapper p:last-child {
-    margin-bottom: 40px;
-}
 
-.skills-oval {
+
+.skills_ovalo {
     position: absolute;
     width: 530px;
     height: 129px;
@@ -212,10 +190,8 @@ h1 {
     left: 189px;
 }
 
-/**************************************************/
-/* Project Section  - Mobile */
-/**************************************************/
-.projects-wrapper {
+
+.projects_contenedor {
     margin-top: 42px;
 }
 
@@ -257,7 +233,7 @@ h1 {
     line-height: 26px;
 }
 
-.project-wrapper {
+.project_contenedor {
     display: flex;
     align-items: center;
     flex-flow: column wrap;
@@ -305,11 +281,11 @@ h1 {
     text-transform: uppercase;
 }
 
-.tool-1 {
+.html {
     padding-right: 18px;
 }
 
-.tool-2 {
+.css {
     padding-right: 20px;
 }
 
@@ -334,15 +310,13 @@ h1 {
     margin-right: 30px;
 }
 
-/**************************************************/
-/* Contact Section  - Mobile */
-/**************************************************/
+
 #contact-section {
     background-color: #242424;
     position: relative;
 }
 
-.contact-oval {
+.contact_ovalo {
     position: absolute;
     width: 530px;
     height: 129px;
@@ -395,7 +369,7 @@ h1 {
     margin-top: 20px;
 }
 
-/* Form */
+
 label {
     display: none;
 }
@@ -436,11 +410,10 @@ textarea::placeholder {
     font-size: 16px;
     font-weight: 500;
     line-height: 26px;
-    letter-spacing: -0.22px;
     padding-left: 24px;
 }
 
-.send-message-button {
+.button_mensaje{
     background-color: #242424;
     border: none;
     color: #ffffff;
@@ -448,18 +421,15 @@ textarea::placeholder {
     line-height: 36px;
     font-weight: 700;
     font-size: 16px;
-    letter-spacing: 2.29px;
+    letter-spacing: 2.19px;
     text-transform: uppercase;
     padding-bottom: 10px;
     cursor: pointer;
     margin-top: 11px;
 }
 
-.send-message-button:hover {
-    color: #4EE1A0;
-}
 
-.send-button-container {
+.button_contenedor {
     display: flex;
     justify-content: flex-end;
     padding-bottom: 87px;
@@ -467,18 +437,14 @@ textarea::placeholder {
 
 .error {
     color: rgba(255, 111, 91, 1);
-    font-weight: 500;
+    font-weight: bold;
     font-size: 12px;
-    height: 16px;
-    letter-spacing: -0.17px;
     margin: 0;
     padding-top: 5px;
     text-align: right;
 }
 
-/**************************************************/
-/* Footer Section  - Mobile */
-/**************************************************/
+
 footer {
     background-color: #242424;
 }
@@ -509,19 +475,14 @@ footer p {
     width: 154px;
 }
 
-.footer-nav-links div li a:hover svg {
-    fill: #4EE1A0;
-}
+
 
 
 
 
 @media(min-width: 1440px) {
 
-    /**************************************************/
-    /* Header Section - Desktop */
-    /**************************************************/
-    /* Start Here */
+
     .nav-container {
         display: flex;
         justify-content: space-between;
@@ -540,7 +501,6 @@ footer p {
     }
 
     .header-message-container {
-        /* Relative to place on top of the image-selfie */
         position: relative;
         align-self: flex-start;
         height: 449px;
@@ -578,14 +538,13 @@ footer p {
         margin-left: 0;
     }
 
-    /* container for positioned images */
     .header-image-container {
         position: relative;
         width: 768px;
         height: 600px;
     }
 
-    .header-oval {
+    .header_ovalo {
         position: absolute;
         width: 530px;
         height: 129px;
@@ -593,16 +552,16 @@ footer p {
         right: 503px;
     }
 
-    .header-circle {
+    .header_circulo {
         position: absolute;
         top: 331px;
         margin-right: 20rem;
-       
-        
+
+
         z-index: 1;
     }
-    /* Primary image */
-    /*figure tag */
+
+  
     .image-selfie {
         position: absolute;
         width: 322px;
@@ -612,7 +571,6 @@ footer p {
         left: unset;
     }
 
-    /* This changes the image to desktop size */
     #selfie {
         content: url('../images/image-profile-desktop.webp');
     }
@@ -622,10 +580,8 @@ footer p {
         line-height: 26px;
     }
 
-    /**************************************************/
-    /* Skills Section - Desktop */
-    /**************************************************/
-    .skills-wrapper {
+  
+    .skills_contenedor {
         margin-left: 165px;
         margin-right: 165px;
     }
@@ -636,11 +592,11 @@ footer p {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    .skills-wrapper h2 {
+    .skills_contenedor h2 {
         margin-top: 58px;
     }
 
-    .skills-oval {
+    .skills_ovalo {
         top: unset;
         bottom: unset;
         left: unset;
@@ -649,10 +605,8 @@ footer p {
         right: -420px;
     }
 
-    /**************************************************/
-    /* Project Section - Desktop */
-    /**************************************************/
-    .projects-wrapper {
+
+    .projects_contenedor {
 
         margin-top: 100px;
     }
@@ -675,7 +629,7 @@ footer p {
         text-align: center;
     }
 
-    .project-wrapper {
+    .project_contenedor {
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
@@ -719,10 +673,8 @@ footer p {
         margin-left: 0;
     }
 
-    /**************************************************/
-    /* Contact Section - Desktop */
-    /**************************************************/
-    .contact-wrapper {
+   
+    .contact_contenedor {
         display: flex;
         justify-content: space-between;
         flex-flow: row wrap;
@@ -759,10 +711,7 @@ footer p {
     }
 
 
-
-    /**************************************************/
-    /* Footer Section - Desktop */
-    /**************************************************/
+    
     .nav-footer-container {
         margin: 0;
         padding-top: 47px;
