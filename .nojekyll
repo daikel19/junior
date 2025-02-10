@@ -1,1 +1,4 @@
+git add .nojekyll
+git commit -m "Deshabilitar Jekyll en GitHub Pages"
+git push origin main
 
